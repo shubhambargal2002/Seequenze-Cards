@@ -31,7 +31,7 @@ const Card = mongoose.model('Card', cardSchema);
 
 // Multer configuration for handling file uploads
 const storage = multer.diskStorage({
-  destination: 'https://seequenze-card-shubham-bargal.netlify.app/uploads',
+  destination: '/uploads',
   filename: (req, file, cb) => {
     cb(null, Date.now() + path.extname(file.originalname));
   },
